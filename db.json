@@ -87,6 +87,14 @@
       "courseId": "_iL775a",
       "birthdate": "1995-02-23",
       "id": 3
+    },
+    {
+      "name": "áb",
+      "birthdate": "2024-12-03",
+      "email": "ab@gmail.com",
+      "newsletter": true,
+      "courseId": "_iL775j",
+      "id": 4
     }
   ]
 }

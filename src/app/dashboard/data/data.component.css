@@ -1,3 +1,27 @@
 button.active {
     background-color: orange;
 }
+
+#pageButton {
+    max-width: 30px;
+}
+
+button {
+    display: inline-block;
+}
+
+table {
+    table-layout: fixed;
+}
+
+.desktop-row-height {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  

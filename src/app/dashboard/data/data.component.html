@@ -1,46 +1,95 @@
-<table>
-    <thead>
-        <tr>
-            <th>Kurs</th>
-            <th>Veranstaltungsort</th>
-            <th>Adresse des Veranstaltungsortes</th>
-            <th>Öffentlich erreichbar?</th>
-            <th>Kursleiter</th>
-            <th>Alle Termine</th>
-          </tr>
-    </thead>
-      <tbody>
-        <tr *ngFor="let course of storeService.courses">
-            <td>{{course.name}}</td>
-            <td>{{course.eventLocation.name}}</td>
-            <td>{{course.eventLocation.address}}</td>
-            <td>{{course.eventLocation.venueByPublicTansport == true ? "Ja" : "Nein"}}</td>
-            <td>{{course.instructor}}</td>
-            <td>
-                <ul>
+<div class="container-fluid">
+  <div class="container-fluid">
+    <div class="row justify-content-center gx-0 desktop-row-height">
+      <div class="col-12 col-md-10 d-flex align-items-center">
+        <div class="card w-100 shadow-lg p-4">
+          <div class="table-responsive d-none d-md-block">
+            <h1>Kurse:</h1>
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Kurs</th>
+                  <th>Veranstaltungsort</th>
+                  <th>Adresse des Veranstaltungsortes</th>
+                  <th>Öffentlich erreichbar?</th>
+                  <th>Kursleiter</th>
+                  <th>Alle Termine</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let course of storeService.courses">
+                  <td>{{course.name}}</td>
+                  <td>{{course.eventLocation.name}}</td>
+                  <td>{{course.eventLocation.address}}</td>
+                  <td>{{course.eventLocation.venueByPublicTansport ? "Ja" : "Nein"}}</td>
+                  <td>{{course.instructor}}</td>
+                  <td>
+                    <ul class="list-unstyled mb-0">
+                      <li *ngFor="let date of course.dates">
+                        <span>{{date.begin | date:"MMM dd, yyyy 'um' hh:mm a"}}</span> - 
+                        <span>{{date.end | date:"MMM dd, yyyy 'um' hh:mm a"}}</span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="d-md-none">
+            <h1>Kurse:</h1>
+            <div class="row mb-3" *ngFor="let course of storeService.courses">
+              <div class="col-12">
+                <div class="card p-3 shadow-sm">
+                  <p><strong>Kurs:</strong> {{course.name}}</p>
+                  <p><strong>Veranstaltungsort:</strong> {{course.eventLocation.name}}</p>
+                  <p><strong>Adresse:</strong> {{course.eventLocation.address}}</p>
+                  <p><strong>Öffentlich erreichbar?:</strong> 
+                    {{course.eventLocation.venueByPublicTansport ? "Ja" : "Nein"}}</p>
+                  <p><strong>Kursleiter:</strong> {{course.instructor}}</p>
+                  <p><strong>Alle Termine:</strong></p>
+                  <ul class="list-unstyled">
                     <li *ngFor="let date of course.dates">
-                        <span>{{date.begin | date:"MMM dd, yyyy 'um' hh:mm a" }}</span> - <span>{{date.end | date:"MMM dd, yyyy 'um' hh:mm a"}}</span>
+                      <span>{{date.begin | date:"MMM dd, yyyy 'um' hh:mm a"}}</span> - 
+                      <span>{{date.end | date:"MMM dd, yyyy 'um' hh:mm a"}}</span>
                     </li>
-                </ul>
-            </td>
-        </tr>
-      </tbody>
-</table>
-
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Geburtsdatum</th>
-            <th>Kurs</th>
-          </tr>
-    </thead>
-      <tbody>
-        <tr *ngFor="let registration of storeService.registrations">
-            <td>{{registration.name}}</td>
-            <td>{{registration.birthdate}}</td>
-            <td>{{registration.course.name}}</td>
-        </tr>
-      </tbody>
-</table>
-<button [ngClass]="page == storeService.currentPage ? 'active' : ''" (click)="selectPage(page)" type="button" *ngFor="let page of returnAllPages()">{{page}}</button>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center gx-0 desktop-row-height">
+    <div class="col-12 col-md-10 d-flex align-items-center">
+      <div class="card w-100 shadow-lg p-4 align-items-center">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Geburtsdatum</th>
+              <th>Kurs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let registration of storeService.registrations">
+              <td>{{registration.name}}</td>
+              <td>{{registration.birthdate}}</td>
+              <td>{{registration.course.name}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="d-flex justify-content-start">
+          <button type="button" id="pageButton" class="btn btn-secondary btn-sm me-2 mb-2"
+                  [ngClass]="{'active': page === storeService.currentPage}"
+                  (click)="selectPage(page)"
+                  *ngFor="let page of returnAllPages()">
+            {{page}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

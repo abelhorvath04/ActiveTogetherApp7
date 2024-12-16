@@ -6,6 +6,9 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 import { StoreService } from './shared/store.service';
 import { BackendService } from './shared/backend.service';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { DatePipe } from '@angular/common';
+import { provideNoopAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,5 +17,8 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideHttpClient(),
     StoreService,
-    BackendService]
+    BackendService,
+    provideAnimationsAsync(),
+    provideNoopAnimations(),
+    DatePipe]
 };
