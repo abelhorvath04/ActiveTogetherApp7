@@ -13,7 +13,20 @@ button {
 
 table {
     table-layout: fixed;
+    width: 100%;
 }
+
+td, tr {
+    font-size: medium;
+    hyphens: auto!important;
+}
+
+.table td, .table th, .table tr {
+    word-break: keep-all; /* A szavak közepén nem törik meg */
+    overflow-wrap: break-word; /* Túl hosszú szöveg esetén engedi a törést */
+    white-space: normal; /* Engedi a sortörést */
+    hyphens: auto!important; 
+  }
 
 .card {
     width: 100%;
@@ -45,4 +58,8 @@ font-size: 0.9rem;
         min-width: fit-content;
         max-width: 90%;
     } 
+
+    td, tr {
+        font-size: small;
+    }
 }

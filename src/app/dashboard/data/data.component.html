@@ -12,9 +12,9 @@
           </thead>
           <tbody>
             <tr *ngFor="let registration of storeService.registrations">
-              <td>{{registration.name}}</td>
-              <td>{{registration.birthdate}}</td>
-              <td>{{registration.course.name}}</td>
+              <td lang="de">{{registration.name}}</td>
+              <td lang="de">{{registration.birthdate}}</td>
+              <td lang="de">{{registration.course.name}}</td>
             </tr>
           </tbody>
         </table>
@@ -38,22 +38,22 @@
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>Kurs</th>
-                  <th>Veranstaltungsort</th>
-                  <th>Adresse des Veranstaltungsortes</th>
-                  <th>Öffentlich erreichbar?</th>
-                  <th>Kursleiter</th>
-                  <th>Alle Termine</th>
+                  <th lang="de">Kurs</th>
+                  <th lang="de">Veranstaltungsort</th>
+                  <th lang="de">Adresse des Veranstaltungsortes</th>
+                  <th lang="de">Öffentlich erreichbar?</th>
+                  <th lang="de">Kursleiter</th>
+                  <th lang="de">Alle Termine</th>
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let course of storeService.courses">
-                  <td>{{course.name}}</td>
-                  <td>{{course.eventLocation.name}}</td>
-                  <td>{{course.eventLocation.address}}</td>
-                  <td>{{course.eventLocation.venueByPublicTansport ? "Ja" : "Nein"}}</td>
-                  <td>{{course.instructor}}</td>
-                  <td>
+                  <td lang="de">{{course.name}}</td>
+                  <td lang="de">{{course.eventLocation.name}}</td>
+                  <td lang="de">{{course.eventLocation.address}}</td>
+                  <td lang="de">{{course.eventLocation.venueByPublicTansport ? "Ja" : "Nein"}}</td>
+                  <td lang="de">{{course.instructor}}</td>
+                  <td lang="de">
                     <ul class="list-unstyled mb-0">
                       <li *ngFor="let date of course.dates">
                         <span>{{date.begin | date:"MMM dd, yyyy 'um' hh:mm a"}}</span> - 
