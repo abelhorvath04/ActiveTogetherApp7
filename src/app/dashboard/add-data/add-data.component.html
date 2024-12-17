@@ -11,7 +11,7 @@
                 <div class="form-group mb-3">
                     <mat-form-field appearance="outline" class="w-100">
                     <mat-label>Name</mat-label>
-                    <input matInput id="name" formControlName="name" placeholder="Name" />
+                    <input matInput id="name" maxlength="50" minlength="1" formControlName="name" placeholder="Name" />
                     <mat-error *ngIf="registrationForm.get('name')?.invalid && registrationForm.get('name')?.touched">
                         Name ist erforderlich!
                     </mat-error>

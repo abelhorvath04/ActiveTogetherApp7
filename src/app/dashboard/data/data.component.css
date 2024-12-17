@@ -1,5 +1,6 @@
 button.active {
-    background-color: orange;
+    background-color: #3F51B5!important;
+    border-color: #3F51B5;
 }
 
 #pageButton {
@@ -14,14 +15,34 @@ table {
     table-layout: fixed;
 }
 
+.card {
+    width: 100%;
+    max-width: 100%;
+}
+
 .desktop-row-height {
     min-height: 80px;
     display: flex;
     align-items: center;
-  }
+}
   
-  .card p {
-    margin: 0;
-    font-size: 0.9rem;
-  }
-  
+.card p {
+margin: 0;
+font-size: 0.9rem;
+}
+
+.mobile-width-kurs {
+    min-width: 300px!important;
+}
+
+.mobile-width-mitglieder {
+    min-width: 300px!important;
+    max-width: 50%;
+} 
+
+@media only screen and (max-width: 768px) { 
+    .mobile-width {
+        min-width: fit-content;
+        max-width: 90%;
+    } 
+}

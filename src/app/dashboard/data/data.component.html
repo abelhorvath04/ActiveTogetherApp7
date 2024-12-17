@@ -1,7 +1,37 @@
 <div class="container-fluid">
+  <div class="row justify-content-center gx-0 desktop-row-height mb-4">
+    <div class="col-12 col-md-10 d-flex align-items-center mobile-width-mitglieder">
+      <div class="card w-100 shadow-lg p-4 align-items-center">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Geburtsdatum</th>
+              <th>Kurs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let registration of storeService.registrations">
+              <td>{{registration.name}}</td>
+              <td>{{registration.birthdate}}</td>
+              <td>{{registration.course.name}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="d-flex justify-content-start">
+          <button type="button" id="pageButton" class="btn btn-secondary btn-sm me-2 mb-2"
+                  [ngClass]="{'active': page === storeService.currentPage}"
+                  (click)="selectPage(page)"
+                  *ngFor="let page of returnAllPages()">
+            {{page}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container-fluid">
-    <div class="row justify-content-center gx-0 desktop-row-height">
-      <div class="col-12 col-md-10 d-flex align-items-center">
+    <div class="row justify-content-center gx-0 desktop-row-height mb-4">
+      <div class="col-12 col-md-10 d-flex align-items-center mobile-width-kurs">
         <div class="card w-100 shadow-lg p-4">
           <div class="table-responsive d-none d-md-block">
             <h1>Kurse:</h1>
@@ -58,36 +88,6 @@
             </div>
           </div>
   
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row justify-content-center gx-0 desktop-row-height">
-    <div class="col-12 col-md-10 d-flex align-items-center">
-      <div class="card w-100 shadow-lg p-4 align-items-center">
-        <table class="table table-bordered table-striped">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Geburtsdatum</th>
-              <th>Kurs</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let registration of storeService.registrations">
-              <td>{{registration.name}}</td>
-              <td>{{registration.birthdate}}</td>
-              <td>{{registration.course.name}}</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="d-flex justify-content-start">
-          <button type="button" id="pageButton" class="btn btn-secondary btn-sm me-2 mb-2"
-                  [ngClass]="{'active': page === storeService.currentPage}"
-                  (click)="selectPage(page)"
-                  *ngFor="let page of returnAllPages()">
-            {{page}}
-          </button>
         </div>
       </div>
     </div>
