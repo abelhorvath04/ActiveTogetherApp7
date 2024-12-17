@@ -14,17 +14,31 @@ button {
 table {
     table-layout: fixed;
     width: 100%;
+    overflow-x: auto;
 }
 
 td, tr {
     font-size: medium;
     hyphens: auto!important;
+    text-align: center;
+}
+
+li {
+    overflow-y: auto;
+}
+
+td {  
+    height: 40px;
+    overflow-x: scroll;
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    white-space: nowrap!important;
 }
 
 .table td, .table th, .table tr {
-    word-break: keep-all; /* A szavak közepén nem törik meg */
-    overflow-wrap: break-word; /* Túl hosszú szöveg esetén engedi a törést */
-    white-space: normal; /* Engedi a sortörést */
+    word-break: keep-all; 
+    overflow-wrap: break-word;
+    white-space: normal; 
     hyphens: auto!important; 
   }
 
