@@ -36,10 +36,11 @@ td {
 }
 
 .table td, .table th, .table tr {
+    vertical-align: middle;
     word-break: keep-all; 
     overflow-wrap: break-word;
     white-space: normal; 
-    hyphens: auto!important; 
+    hyphens: auto!important;
   }
 
 .card {

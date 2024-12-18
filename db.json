@@ -95,6 +95,14 @@
       "newsletter": true,
       "courseId": "_iL775j",
       "id": 4
+    },
+    {
+      "name": "applesaft",
+      "birthdate": "2024-12-04",
+      "email": "apple@saft.com",
+      "courseId": "_iL775j",
+      "newsletter": true,
+      "id": 5
     }
   ]
 }
