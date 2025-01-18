@@ -14,7 +14,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { DatePipe } from '@angular/common';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
-
 @Component({
   selector: 'app-add-data',
   standalone: true,

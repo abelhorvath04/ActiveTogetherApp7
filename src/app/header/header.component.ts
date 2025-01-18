@@ -9,6 +9,4 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  public title: string = 'Stay Active, Stay Together';
-  public imagePath: string = "./../assets/images/sport.jpeg";
 }

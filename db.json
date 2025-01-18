@@ -71,38 +71,22 @@
   ],
   "registrations": [
     {
-      "id": 1,
-      "name": "Testuser",
-      "birthdate": "2024-11-13",
-      "courseId": "_iL775j"
-    },
-    {
-      "name": "Julia Schabasser",
+      "name": "Luisi Hex",
+      "birthdate": "1705-03-13",
+      "email": "luisi@agendorfer.hex",
       "courseId": "_iL775i",
-      "birthdate": "1995-02-23",
+      "newsletter": true,
+      "date": "2025. 01. 18. 20:44:27",
       "id": 2
     },
     {
-      "name": "Julia Schabasser",
-      "courseId": "_iL775a",
-      "birthdate": "1995-02-23",
+      "name": "Zwerg",
+      "birthdate": "1474-12-31",
+      "email": "zwerg@berg.de",
+      "courseId": "_iL775j",
+      "newsletter": true,
+      "date": "2025. 01. 18. 20:50:24",
       "id": 3
-    },
-    {
-      "name": "áb",
-      "birthdate": "2024-12-03",
-      "email": "ab@gmail.com",
-      "newsletter": true,
-      "courseId": "_iL775j",
-      "id": 4
-    },
-    {
-      "name": "applesaft",
-      "birthdate": "2024-12-04",
-      "email": "apple@saft.com",
-      "courseId": "_iL775j",
-      "newsletter": true,
-      "id": 5
     }
   ]
 }

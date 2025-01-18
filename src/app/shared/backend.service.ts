@@ -33,8 +33,15 @@ export class BackendService {
   }
 
   public addRegistration(registration: any, page: number) {
-    this.http.post('http://localhost:5000/registrations', registration).subscribe(_ => {
+    const data = {
+      ...registration, date: new Date().toLocaleString()
+    };
+    this.http.post('http://localhost:5000/registrations', data).subscribe(_ => {
       this.getRegistrations(page);
     })
+  }
+
+  public delete(id: number) {
+    return this.http.delete(`http://localhost:5000/registrations/${id}`);
   }
 }

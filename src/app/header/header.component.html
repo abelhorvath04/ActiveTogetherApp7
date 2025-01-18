@@ -1,12 +1,20 @@
 <div class="container">
     <div class="row col-12 justify-content-center">
-        <div class="col-12 col-md-10 d-flex align-items-center justify-content-center">
+        <div class="col-12 col-md-10 text-center d-flex align-items-center justify-content-center">
             <div>
-                <h1 class="text-center animate-character">{{ title }}</h1>
-                <br>
+                <h4 class="wordCarousel">
+                    <span>ActiveTogetherApp </span>
+                    <div>
+                        <ul class="flip5">
+                            <li>Active</li>
+                            <li>Stay</li>
+                            <li>Together</li>
+                            <li>Stay</li>
+                        </ul>
+                    </div>
+                </h4>                <br>
                 <div class="container">
                     <div class="row col-12 justify-content-center">
-                        <img class="justify-content-center" src={{imagePath}}>
                         <hr class="mt-3">
                         <a class="btn btn-primary m-2" id="mainButton" href="#" role="button" [routerLink]="['/dashboard']">Dashboard</a>
                         <a class="btn btn-primary m-2" id="mainButton" href="#" role="button" [routerLink]="['/about']">About</a>
